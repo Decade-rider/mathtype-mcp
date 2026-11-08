@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mathtype-mcp"
+version = "0.2.0"
+description = "Independent Windows Word MCP for native MathType equations"
+readme = "README.md"
+keywords = ["mcp", "mathtype", "word", "equations"]
+classifiers = ["Development Status :: 3 - Alpha", "Operating System :: Microsoft :: Windows"]
+requires-python = ">=3.12"
+dependencies = ["mcp>=1.26,<2", "pywin32>=310; sys_platform == 'win32'"]
+
+[project.scripts]
+mathtype-mcp = "mathtype_mcp.server:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mathtype_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src", "tests", "scripts", "config", "docs", ".github", "README.md", "CHANGELOG.md", "NOTICE.md", "LICENSE_STATUS.md", "CONTRIBUTING.md", "pyproject.toml", "uv.lock", ".gitignore", ".gitattributes", "RELEASE_VALIDATION.md"]

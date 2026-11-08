@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mathtype": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\path\\to\\mathtype-mcp",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "mathtype_mcp.server"
+      ]
+    }
+  }
+}

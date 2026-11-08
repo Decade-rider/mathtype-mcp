@@ -1,0 +1,5 @@
+[mcp_servers.mathtype]
+command = "uv"
+args = ["--directory", "C:\\path\\to\\mathtype-mcp", "run", "--no-sync", "python", "-m", "mathtype_mcp.server"]
+startup_timeout_sec = 30
+tool_timeout_sec = 300

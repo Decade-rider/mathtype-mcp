@@ -1,0 +1,24 @@
+# Local environments and caches
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+# Build and local verification output
+dist/
+build/
+artifacts/
+# Machine-specific configuration and secrets
+config/*.local.*
+.env
+.env.*
+!.env.example
+*.log
+*.bak
+*.backup*
+config.toml.*backup*
+~$*
+.DS_Store
+Thumbs.db
